@@ -1,0 +1,1 @@
+# btm-equihash-auxpow
