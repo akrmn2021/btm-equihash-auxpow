@@ -80,7 +80,7 @@ do
     ntx=1
     if [ "$transactionsLen" -gt 2 ]
     then
-	echo "transactions = $transactions"
+	#echo "transactions = $transactions"
 	let ntx=ntx+`echo $transactions | jq length`
 	transactionsHex=`echo "$transactions" | jq '.[].data' | sed 's/"//g' | while read -r data; do echo -n "$data"; done`
     fi
@@ -155,6 +155,7 @@ do
 		nIndex=00000000
 		vChainMerkleBranch=00
 		nChainIndex=00000000
+		# the coinbase tx is encoded in vector format
 		auxpow="$coinbaseTxLenHex$coinbaseTx$zecHeaderHash$vMerkleBranch$nIndex$vChainMerkleBranch$nChainIndex$zecHeader"
 		echo "auxpow = $auxpow"
 		printf "(%s) Submitting auxpow to Bitmark\n" "`date`"
