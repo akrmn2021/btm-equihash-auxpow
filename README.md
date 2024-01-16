@@ -6,7 +6,7 @@ Dependencies:
 
 jq (for json parsing in bash)
 
-bitmarkd: https://github.com/akrmn2021/bitmark/tree/0.9.7.4 (git clone -b 0.9.7.4 https://github.com/akrmn2021/bitmark bitmark-ak). Note: You can also use the bitmark code from https://github.com/project-bitmark/bitmark, however this version (master) doesn't seem to compile on Ubuntu 20. You can try checking out the commit from May 2021.
+bitmarkd: https://github.com/akrmn2021/bitmark/tree/master2024 (git clone -b master2024 https://github.com/akrmn2021/bitmark bitmark-ak). Note: You can also use the bitmark code from https://github.com/project-bitmark/bitmark, however this version (master) doesn't seem to compile. You can try checking out the commit from May 2021.
 
 zcashd fork: https://github.com/akrmn2021/zcash/tree/5.7.0 (git clone -b 5.7.0 https://github.com/akrmn2021/zcash zcash-auxpow). This fork adds an "auxpowhash" parameter to getblocktemplate (to insert the BTM block hash into the Zcash coinbase) and makes getblocktemplate output the merkle branch for the coinbase tx (which is needed for submitting the auxpow to Bitmark).
 
